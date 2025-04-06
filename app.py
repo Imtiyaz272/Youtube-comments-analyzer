@@ -13,6 +13,11 @@ import matplotlib.pyplot as plt
 from collections import Counter
 import seaborn as sns
 import io
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+api_key = os.getenv("YOUTUBE_API_KEY")
 
 # Download necessary NLTK resources
 nltk.download("punkt")
@@ -67,7 +72,6 @@ def extract_video_id(url):
 # Fetch YouTube Comments
 def fetch_youtube_comments(video_url):
     try:
-        api_key = "AIzaSyCXH92GttbwaEIsUWTXie5dzYGrPxWR0Aw"
         youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=api_key)
         video_id = extract_video_id(video_url)
 
