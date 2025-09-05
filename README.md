@@ -28,7 +28,7 @@ This project provides tools to analyze YouTube comments through sentiment analys
    pip install pandas numpy scikit-learn tensorflow flask jupyter matplotlib seaborn nltk textblob
    ```
 
-3. **Download NLTK data** (if using NLTK)
+3. **Download NLTK data** 
    ```python
    import nltk
    nltk.download('vader_lexicon')
